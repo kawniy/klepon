@@ -1,0 +1,12 @@
+{
+    "name": "kawniy/klepon",
+    "description": "PHP Framework for Small Project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "kawniy",
+            "email": "fata.kawniy@gmail.com"
+        }
+    ],
+    "require": {}
+}
