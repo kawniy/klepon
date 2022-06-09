@@ -8,4 +8,4 @@
 
 require_once "../app/init.php";
 require_once "../vendor/autoload.php";
-$app = new Route();
+$route = new Route();
