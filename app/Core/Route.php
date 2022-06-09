@@ -2,7 +2,7 @@
 
 class Route {
     
-  protected $controller = 'homeController';
+  protected $controller = 'GreenBase';
   protected $method     = 'index';
   protected $params     = [];
 
@@ -11,7 +11,7 @@ class Route {
     // Get the URL
     if (isset($_GET['url'])) {
       $url = explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
-      $url[0] = $url[0] . 'Controller';
+      $url[0] = 'Green' . $url[0];
     } else {
       $url[0] = $this->controller;
     }
@@ -20,7 +20,7 @@ class Route {
     if (file_exists('../app/Controllers/' . $url[0] . '.php')) {
       $this->controller = $url[0];
     } else {
-      return require_once '../app/Views/Error/404.php';
+      $this->controller = 'Green404';
     }
 
     require_once '../app/Controllers/' . $this->controller . '.php';
